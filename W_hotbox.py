@@ -55,6 +55,11 @@ import colorsys
 
 import W_hotboxManager
 
+import mglLogger
+logger = mglLogger.get_logger(__name__)
+logger.info("W_hotbox common loaded.")
+# logger.setLevel("DEBUG")
+
 preferencesNode = nuke.toNode('preferences')
 operatingSystem = platform.system()
 
