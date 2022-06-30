@@ -2,7 +2,7 @@
 #
 # AUTOMATICALLY GENERATED FILE TO BE USED BY W_HOTBOX
 #
-# NAME: <img src="/u/sbaykal/Documents/__tmp/mgl_buttons/icons/rgba.png">
+# NAME: <img src="mglIcon/rgba.png">
 #
 #----------------------------------------------------------------------------------------------------------
 

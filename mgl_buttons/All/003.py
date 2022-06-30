@@ -2,7 +2,7 @@
 #
 # AUTOMATICALLY GENERATED FILE TO BE USED BY W_HOTBOX
 #
-# NAME: <img src="/u/sbaykal/.nuke/W_hotbox/img/a.png">
+# NAME: <img src="mglIcon/a.png">
 #
 #----------------------------------------------------------------------------------------------------------
 
