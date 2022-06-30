@@ -1,6 +1,6 @@
 # DISCLAIMER
 
-This repository is just a repo of the W_hotbox tool available on [nukepedia](http://www.nukepedia.com/python/ui/w_hotbox) made by Wouter Gilsing.
+This repository is a Mac Guff ligne fork of the W_hotbox tool available on [nukepedia](http://www.nukepedia.com/python/ui/w_hotbox) made by Wouter Gilsing.
 
 
 ---
