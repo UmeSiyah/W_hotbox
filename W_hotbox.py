@@ -715,6 +715,10 @@ class HotboxButton(QtWidgets.QLabel):
                 if color:
                     self.bgColor = color
 
+                # Setup the path to mglIcons folder
+                if 'mglIcon' in name:
+                    name = name.replace('mglIcon', os.getenv('W_HOTBOX_MGLICONS'))
+
             #----------------------------------------------------------------------------------------------
 
         self.setAlignment(QtCore.Qt.AlignCenter)
@@ -1485,7 +1489,7 @@ if 'W_HOTBOX_REPO_PATHS' in os.environ and 'W_HOTBOX_REPO_NAMES' in os.environ.k
     if len(extraRepositories) > 0:
         editMenu.addCommand('W_hotbox/-', '', '')
         for repo in extraRepositories:
-            editMenu.addCommand('W_hotbox/Special/Open Hotbox Manager - {}'.format(repo[0]), 'W_hotboxManager.showHotboxManager(path="{}")'.format(repo[1]))
+            editMenu.addCommand('W_hotbox/Special/Open Hotbox Manager - {}'.format(repo[0]), 'W_hotboxCommon.W_hotboxManager.showHotboxManager(path="{}")'.format(repo[1]))
 
 #----------------------------------------------------------------------------------------------------------
 
