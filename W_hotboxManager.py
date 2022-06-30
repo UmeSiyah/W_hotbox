@@ -61,6 +61,10 @@ from webbrowser import open as openURL
 
 import W_hotbox
 
+import mglLogger
+logger = mglLogger.get_logger(__name__)
+logger.info("W_hotboxManager common loaded.")
+
 preferencesNode = nuke.toNode('preferences')
 
 #----------------------------------------------------------------------------------------------------------
