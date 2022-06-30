@@ -654,7 +654,10 @@ class HotboxButton(QtWidgets.QLabel):
         #set the border color to grey for buttons from an additional repository
         for index,i in enumerate(extraRepositories):
             if name.startswith(i[1]):
-                self.borderColor = '#959595'
+                if 'mgl' in name:
+                    self.borderColor = '#f89c0d'
+                else:
+                    self.borderColor = '#959595'
                 break
 
         if function != None:
