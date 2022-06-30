@@ -1394,16 +1394,16 @@ def addMenuItems():
 
     editMenu.addCommand('W_hotbox/Open W_hotbox', showHotbox, shortcut)
     editMenu.addCommand('W_hotbox/-', '', '')
-    editMenu.addCommand('W_hotbox/Open Hotbox Manager', 'W_hotboxCommon.W_hotboxManager.showHotboxManager()')
+    editMenu.addCommand('W_hotbox/Open Hotbox Manager', 'W_hotboxManager.showHotboxManager()')
     editMenu.addCommand('W_hotbox/Open in %s'%getFileBrowser(), revealInBrowser)
     editMenu.addCommand('W_hotbox/-', '', '')
-    editMenu.addCommand('W_hotbox/Repair', 'W_hotboxCommon.W_hotboxManager.repairHotbox()')
-    editMenu.addCommand('W_hotbox/Clear/Clear Everything', 'W_hotboxCommon.W_hotboxManager.clearHotboxManager()')
-    editMenu.addCommand('W_hotbox/Clear/Clear Section/Single', 'W_hotboxCommon.W_hotboxManager.clearHotboxManager(["Single"])')
-    editMenu.addCommand('W_hotbox/Clear/Clear Section/Multiple', 'W_hotboxCommon.W_hotboxManager.clearHotboxManager(["Multiple"])')
-    editMenu.addCommand('W_hotbox/Clear/Clear Section/All', 'W_hotboxCommon.W_hotboxManager.clearHotboxManager(["All"])')
+    editMenu.addCommand('W_hotbox/Repair', 'W_hotboxManager.repairHotbox()')
+    editMenu.addCommand('W_hotbox/Clear/Clear Everything', 'W_hotboxManager.clearHotboxManager()')
+    editMenu.addCommand('W_hotbox/Clear/Clear Section/Single', 'W_hotboxManager.clearHotboxManager(["Single"])')
+    editMenu.addCommand('W_hotbox/Clear/Clear Section/Multiple', 'W_hotboxManager.clearHotboxManager(["Multiple"])')
+    editMenu.addCommand('W_hotbox/Clear/Clear Section/All', 'W_hotboxManager.clearHotboxManager(["All"])')
     editMenu.addCommand('W_hotbox/Clear/Clear Section/-', '', '')
-    editMenu.addCommand('W_hotbox/Clear/Clear Section/Templates', 'W_hotboxCommon.W_hotboxManager.clearHotboxManager(["Templates"])')
+    editMenu.addCommand('W_hotbox/Clear/Clear Section/Templates', 'W_hotboxManager.clearHotboxManager(["Templates"])')
 
 def resetMenuItems():
     '''
@@ -1489,7 +1489,7 @@ if 'W_HOTBOX_REPO_PATHS' in os.environ and 'W_HOTBOX_REPO_NAMES' in os.environ.k
     if len(extraRepositories) > 0:
         editMenu.addCommand('W_hotbox/-', '', '')
         for repo in extraRepositories:
-            editMenu.addCommand('W_hotbox/Special/Open Hotbox Manager - {}'.format(repo[0]), 'W_hotboxCommon.W_hotboxManager.showHotboxManager(path="{}")'.format(repo[1]))
+            editMenu.addCommand('W_hotbox/Special/Open Hotbox Manager - {}'.format(repo[0]), 'W_hotboxManager.showHotboxManager(path="{}")'.format(repo[1]))
 
 #----------------------------------------------------------------------------------------------------------
 
