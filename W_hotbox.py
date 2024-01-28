@@ -55,8 +55,14 @@ import colorsys
 
 import W_hotboxManager
 
-import mglLogger
-logger = mglLogger.get_logger(__name__)
+try:
+    import mglLogger
+    logger = mglLogger.get_logger(__name__)
+except ModuleNotFoundError:
+    import logging
+    logger = logging.getLogger(__name__)
+    logger.debug("mglLogger not found, fallback to logging module.")
+
 logger.info("W_hotbox common loaded.")
 # logger.setLevel("DEBUG")
 
