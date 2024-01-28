@@ -1,7 +1,7 @@
 import os
 import nuke
 
-W_hotboxCommonPath = os.getenv('W_HOTBOXCOMON_REPO')
+W_hotboxCommonPath = os.getenv('W_HOTBOXCOMON_REPO', "")
 nuke.pluginAddPath(W_hotboxCommonPath)
 
 os.environ['W_HOTBOX_ICONS'] = f"{W_hotboxCommonPath}default_buttons/icons"
