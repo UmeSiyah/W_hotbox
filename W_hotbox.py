@@ -320,7 +320,9 @@ class NodeButtons(QtWidgets.QVBoxLayout):
                 mirrored = 1 - mirrored
 
             self.path = (
-                preferencesNode.knob("hotboxLocation").value().replace("\\", "/")
+                preferencesNode.knob("hotboxLocation")
+                .evaluate()
+                .replace("\\", "/")
             )
             if self.path[-1] != "/":
                 self.path = self.path + "/"
@@ -1408,7 +1410,7 @@ def revealInBrowser(startFolder=False):
     Reveal the hotbox folder in a filebrowser
     """
     if startFolder:
-        path = preferencesNode.knob("hotboxLocation").value()
+        path = preferencesNode.knob("hotboxLocation").evaluate()
 
     else:
         try:
@@ -1615,7 +1617,7 @@ addPreferences()
 
 # make sure the archive folders are present, if not, create them
 hotboxLocationPathKnob = preferencesNode.knob("hotboxLocation")
-hotboxLocationPath = hotboxLocationPathKnob.value().replace("\\", "/")
+hotboxLocationPath = hotboxLocationPathKnob.evaluate().replace("\\", "/")
 
 if not hotboxLocationPath:
     hotboxLocationPath = homeFolder + "/W_hotbox"
