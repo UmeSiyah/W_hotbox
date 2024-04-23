@@ -507,9 +507,12 @@ class NodeButtons(QtWidgets.QVBoxLayout):
             allItems = []
 
             for folder in self.folderList:
-                for file in sorted(os.listdir(folder)):
-                    if file[0] not in [".", "_"] and len(file) in [3, 6]:
-                        allItems.append("/".join([folder, file]))
+                try:
+                    for file in sorted(os.listdir(folder)):
+                        if file[0] not in [".", "_"] and len(file) in [3, 6]:
+                            allItems.append("/".join([folder, file]))
+                except FileNotFoundError as err:
+                    logger.error(err)
 
         # --------------------------------------------------------------------------------------------------
         # devide in rows based on the row maximum
